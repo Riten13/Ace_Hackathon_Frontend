@@ -7,6 +7,8 @@ import {
   ForgotPassword,
   Landing,
   Login,
+  NoteEditor,
+  Notes,
   NotFound,
   Onboarding,
   Profile,
@@ -65,6 +67,26 @@ function App() {
               element={
                 <Protector>
                   <EmotionalCoach />
+                </Protector>
+              }
+            />
+
+            {/* View all your notes */}
+            <Route
+              path="/notes"
+              element={
+                <Protector>
+                  <Notes />
+                </Protector>
+              }
+            />
+
+            {/* Displays a note (Allows to edit if you're the note owner) */}
+            <Route
+              path="/notes/:noteId"
+              element={
+                <Protector>
+                  <NoteEditor />
                 </Protector>
               }
             />

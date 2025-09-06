@@ -1,7 +1,14 @@
 import { cn } from "@/lib/utils";
 
 // Styled Text input
-const Input = ({ value, placeholder, onChange, className = "", disabled }) => {
+const Input = ({
+  value,
+  placeholder,
+  onChange,
+  className = "",
+  disabled,
+  ...props
+}) => {
   return (
     <input
       type="text"
@@ -12,6 +19,7 @@ const Input = ({ value, placeholder, onChange, className = "", disabled }) => {
       value={value}
       placeholder={placeholder}
       onChange={onChange}
+      {...props}
     />
   );
 };
