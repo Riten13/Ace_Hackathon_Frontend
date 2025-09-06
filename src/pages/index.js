@@ -9,5 +9,7 @@ import Signout from "./Signout";
 import Onboarding from "./Onboarding";
 import Profile from "./Profile";
 import EditProfile from "./EditProfile";
+import EmotionalCoach from "./EmotionalCoach";
+import EQTest from "./EQTest";
 
-export { Landing, NotFound, Signup, Login, ForgotPassword, AuthAction, Signout, Onboarding, Profile, EditProfile };
+export { Landing, NotFound, Signup, Login, ForgotPassword, AuthAction, Signout, Onboarding, Profile, EditProfile, EmotionalCoach, EQTest };

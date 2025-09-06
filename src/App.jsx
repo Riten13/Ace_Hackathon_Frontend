@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   AuthAction,
   EditProfile,
+  EmotionalCoach,
+  EQTest,
   ForgotPassword,
   Landing,
   Login,
@@ -13,6 +15,7 @@ import {
 } from "./pages";
 import { Footer, Navbar } from "./components";
 import Protector from "./components/Protector";
+import BreathingExercise from "./components/BoxBreathing";
 
 function App() {
   return (
@@ -30,6 +33,11 @@ function App() {
             <Route path="/signout" element={<Signout />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/auth-action" element={<AuthAction />} />
+            <Route path="/auth-action" element={<AuthAction />} />
+            <Route path="/auth-action" element={<AuthAction />} />
+            <Route path="/eq-assessment" element={<EQTest />} />
+
+            <Route path="/breathing" element={<BreathingExercise />} />
 
             {/* Protected routes - Logged In User required. */}
 
@@ -48,6 +56,15 @@ function App() {
               element={
                 <Protector>
                   <Profile />
+                </Protector>
+              }
+            />
+
+            <Route
+              path="/wellness-ai"
+              element={
+                <Protector>
+                  <EmotionalCoach />
                 </Protector>
               }
             />
